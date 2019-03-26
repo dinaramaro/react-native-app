@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Text, View } from 'react-native';
+import { Text, View, Button } from 'react-native';
 
 import App from './App';
 
@@ -14,6 +14,13 @@ describe('<App />', () => {
 describe('within View', () => {
   it('renders Text with text "Aucun article"', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.props().children).toEqual(<Text>Aucun article</Text>);
+    expect(wrapper.props().children).toContainEqual(<Text>Aucun article</Text>);
+  });
+});
+
+describe('Button', () => {
+  it('renders a Button', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find(Button)).toHaveLength(1);
   });
 });

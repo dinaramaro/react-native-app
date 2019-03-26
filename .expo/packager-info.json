@@ -3,7 +3,7 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": "https://vj-3v9.dinaramaro.my-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.vj-3v9.dinaramaro.my-app.exp.direct",
-  "ngrokPid": 8410
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
