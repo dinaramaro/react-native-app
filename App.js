@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Alert } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -10,7 +10,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const onPressAddArticle = () => {};
+const onPressAddArticle = () => {
+  Alert.alert('Alert Title', 'Touché');
+};
 
 const App = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Text, View, Button } from 'react-native';
+import { Text, View, Button, Alert } from 'react-native';
 
 import App from './App';
 
@@ -22,5 +22,14 @@ describe('Button', () => {
   it('renders a Button', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find(Button)).toHaveLength(1);
+  });
+});
+
+describe('Alert', () => {
+  it('renders the message "Touché"', () => {
+    Alert.alert = jest.fn();
+    const wrapper = shallow(<App />);
+    wrapper.find(Button).simulate('Press');
+    expect(Alert.alert.mock.calls[0][1]).toEqual('Touché');
   });
 });
